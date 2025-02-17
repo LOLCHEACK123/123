@@ -5,30 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Магазин техники</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
 </head>
 <body>
     <h1>Добро пожаловать в магазин техники</h1>
     <a href="{{ url_for('logout') }}">Выйти</a>
 
-    <h2>Каталог товаров</h2>
-    <ul>
-        {% for category, items in products.items() %}
-            <h3>{{ category }}</h3>
-            <div class="category-items">
-                {% for item in items %}
-                    <li>
-                        <img src="{{ item.image }}" alt="{{ item.name }}">
-                        <h4>{{ item.name }}</h4>
-                        <p>${{ item.price }}</p>
-                        <form method="post" action="{{ url_for('cart') }}">
-                            <input type="hidden" name="item" value="{{ item.name }}">
-                            <button type="submit">Добавить в корзину</button>
-                        </form>
-                    </li>
-                {% endfor %}
-            </div>
-        {% endfor %}
-    </ul>
+    <h2>Каталог</h2>
+    {% for category, items in products.items() %}
+        <h3>{{ category }}</h3>
+        <ul>
+            {% for item in items %}
+                <li>
+                    <img src="{{ item.image }}" alt="{{ item.name }}" style="width: 150px; height: auto; margin-bottom: 10px;">
+                    <h4>{{ item.name }}</h4>
+                    <p>${{ item.price }}</p>
+                    <form method="post" action="{{ url_for('cart') }}">
+                        <input type="hidden" name="item" value="{{ item.name }}">
+                        <button type="submit">Добавить в корзину</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
 
     <a href="{{ url_for('cart') }}">Перейти в корзину</a>
 </body>
