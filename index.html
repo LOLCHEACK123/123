@@ -17,9 +17,9 @@
         <ul>
             {% for item in items %}
                 <li>
-                    <img src="{{ item.image }}" alt="{{ item.name }}" style="width: 150px; height: auto; margin-bottom: 10px;">
-                    <h4>{{ item.name }}</h4>
-                    <p>${{ item.price }}</p>
+                    <!-- Добавляем изображение товара -->
+                    <img src="{{ url_for('static', filename='images/' + item.image) }}" alt="{{ item.name }}" style="width: 150px; height: auto; margin-bottom: 10px;">
+                    {{ item.name }} - ${{ item.price }}
                     <form method="post" action="{{ url_for('cart') }}">
                         <input type="hidden" name="item" value="{{ item.name }}">
                         <button type="submit">Добавить в корзину</button>
