@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оплата</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Оплата</h1>
+        <p>Спасибо за покупку! Уведомление отправлено в Telegram.</p>
+        <a href="{{ url_for('home') }}" class="btn-return">Вернуться в магазин</a>
+    </div>
+</body>
+</html>
