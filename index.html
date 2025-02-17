@@ -18,7 +18,7 @@
             {% for item in items %}
                 <li>
                     <!-- Добавляем изображение товара -->
-                    <img src="{{ url_for('static', filename='images/' + item.image) }}" alt="{{ item.name }}" style="width: 150px; height: auto; margin-bottom: 10px;">
+                    <img src="{{ url_for('static', filename='image/' + item.image) }}" alt="{{ item.name }}" style="width: 150px; height: auto; margin-bottom: 10px;">
                     {{ item.name }} - ${{ item.price }}
                     <form method="post" action="{{ url_for('cart') }}">
                         <input type="hidden" name="item" value="{{ item.name }}">
