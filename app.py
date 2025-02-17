@@ -9,24 +9,24 @@ TELEGRAM_CHAT_ID = "YOUR_CHAT_ID"
 
 products = {
     "Телефоны": [
-        {"name": "iPhone 15 Pro", "price": 999},
-        {"name": "Samsung Galaxy S23", "price": 899},
-        {"name": "Google Pixel 7", "price": 799}
+        {"name": "iPhone 15 Pro", "price": 999, "image": "/static/images/iphone15pro.jpg"},
+        {"name": "Samsung Galaxy S23", "price": 899, "image": "/static/images/samsung-galaxy-s23.jpg"},
+        {"name": "Google Pixel 7", "price": 799, "image": "/static/images/google-pixel-7.jpg"}
     ],
     "Ноутбуки": [
-        {"name": "MacBook Air M2", "price": 1199},
-        {"name": "Asus ROG Zephyrus", "price": 1499},
-        {"name": "Dell XPS 15", "price": 1299}
+        {"name": "MacBook Air M2", "price": 1199, "image": "/static/images/macbook-air-m2.jpg"},
+        {"name": "Asus ROG Zephyrus", "price": 1499, "image": "/static/images/asus-rog-zephyrus.jpg"},
+        {"name": "Dell XPS 15", "price": 1299, "image": "/static/images/dell-xps-15.jpg"}
     ],
     "Телевизоры": [
-        {"name": "LG OLED C2", "price": 1299},
-        {"name": "Samsung QLED Q80", "price": 1099},
-        {"name": "Sony Bravia XR", "price": 1399}
+        {"name": "LG OLED C2", "price": 1299, "image": "/static/images/lg-oled-c2.jpg"},
+        {"name": "Samsung QLED Q80", "price": 1099, "image": "/static/images/samsung-qled-q80.jpg"},
+        {"name": "Sony Bravia XR", "price": 1399, "image": "/static/images/sony-bravia-xr.jpg"}
     ],
     "PlayStation": [
-        {"name": "PlayStation 5", "price": 499},
-        {"name": "PlayStation 4 Pro", "price": 399},
-        {"name": "PlayStation VR2", "price": 549}
+        {"name": "PlayStation 5", "price": 499, "image": "/static/images/playstation-5.jpg"},
+        {"name": "PlayStation 4 Pro", "price": 399, "image": "/static/images/playstation-4-pro.jpg"},
+        {"name": "PlayStation VR2", "price": 549, "image": "/static/images/playstation-vr2.jpg"}
     ]
 }
 
